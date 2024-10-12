@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>STATIC_SINGLETON</name>
+	<name>Inheritance</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -16,7 +16,7 @@
 	</natures>
 	<filteredResources>
 		<filter>
-			<id>1728722617416</id>
+			<id>1728722617400</id>
 			<name></name>
 			<type>30</type>
 			<matcher>
