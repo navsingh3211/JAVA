@@ -11,6 +11,10 @@ public class Box {
 		this.w = -1;
 	}
 	
+	static void greeting() {
+		System.out.println("HY static method greeting from Box class");
+	}
+	
 	//cube
 	Box(double side){
 //		super();

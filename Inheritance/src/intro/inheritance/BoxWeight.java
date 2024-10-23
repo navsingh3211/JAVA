@@ -8,6 +8,11 @@ public class BoxWeight extends Box {
 		this.h = 3;
 	}
 	
+//	@Override
+	static void greeting() {
+		System.out.println("static method greeting from BoxWeight class");
+	}
+	
 	BoxWeight(double side,double weight){
 		super(side);
 		this.weight = weight;

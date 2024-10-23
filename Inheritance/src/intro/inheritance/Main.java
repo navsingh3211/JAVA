@@ -26,10 +26,13 @@ public class Main {
 //		System.out.println(box6.weight);
 		
 		
-		BoxPrice box11 = new BoxPrice(11,58,101.0);
-		System.out.println(box11.cost);
+//		BoxPrice box11 = new BoxPrice(11,58,101.0);
+//		System.out.println(box11.cost);
 		
-		
+		//we can inherite static method but
+		//static method can't be overriden
+		Box bw = new BoxWeight();
+		bw.greeting();
 		
 		
 	}	
