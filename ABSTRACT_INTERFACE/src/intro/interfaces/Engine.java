@@ -6,4 +6,7 @@ public interface Engine {
 	void start();
 	void stop();
 	void acc();
+	public static void greet() {
+		System.out.println("Greeting from car company.");
+	}
 }
