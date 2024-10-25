@@ -1,5 +1,5 @@
 package intro.interfaces.ExtendDemo;
 
-public interface B {
+public interface B{
 	void greet();
 }
