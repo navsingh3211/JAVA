@@ -1,16 +1,24 @@
 package generics;
 
-import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
+
 
 //here T should either be Number or its subclasses
-public class CustomGenericArrList<T extends Number> {
+public class WildCardExample<T extends Number> {
 	private Object[] data;
 	private static int DEFAULT_SIZE = 10;
 	private int size = 0; // also working as index value
 	
-	public CustomGenericArrList() {
+	public WildCardExample() {
 		this.data = new Object[DEFAULT_SIZE];
+	}
+	
+	//if you want to pass number type and sub-classes of it
+	//wild card example
+	public void getList(List<? extends Number> list) {
+		//do something
+		
 	}
 	
 	public void add(T num) {
@@ -62,7 +70,7 @@ public class CustomGenericArrList<T extends Number> {
 //		list.add(25);
 //		System.out.println(list);
 		
-		CustomGenericArrList<Integer> cusArr = new CustomGenericArrList<>();
+		WildCardExample<Integer> cusArr = new WildCardExample<>();
 		for(int i=0;i<14;i++) {
 			cusArr.add(2*i);
 		}
