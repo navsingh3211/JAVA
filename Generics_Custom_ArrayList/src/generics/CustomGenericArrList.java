@@ -3,17 +3,16 @@ package generics;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class CustomArrayList {
-	
-	private int[] data;
+public class CustomGenericArrList<T> {
+	private Object[] data;
 	private static int DEFAULT_SIZE = 10;
 	private int size = 0; // also working as index value
 	
-	public CustomArrayList() {
-		this.data = new int[DEFAULT_SIZE];
+	public CustomGenericArrList() {
+		this.data = new Object[DEFAULT_SIZE];
 	}
 	
-	public void add(int num) {
+	public void add(T num) {
 		if(isFull()) {
 			resize();
 		}
@@ -21,7 +20,7 @@ public class CustomArrayList {
 	}
 	
 	private void resize() {
-		int[] temp = new int[data.length*2];
+		Object[] temp = new Object[data.length*2];
 		for(int i=0;i<data.length;i++) {
 			temp[i] = data[i];
 		}
@@ -32,29 +31,24 @@ public class CustomArrayList {
 		return size == data.length;
 	}
 	
-	private int remove() {
-		int remove = data[--size];
+	private T remove() {
+		T remove = (T)(data[--size]);
 		return remove;
 	}
 	
-	public int get(int index) {
-		return data[index];
+	public T get(int index) {
+		return (T)data[index];
 	}
 	
 	public int size() {
 		return size;
 	}
 	
-	public void set(int index,int value) {
+	public void set(int index,T value) {
 		data[index] = value;
 	}
 	
-	public void printData() {
-		for(int ele : data) {
-			System.out.println(ele + " ");
-		}
-		
-	}
+	
 	
 	public String toString() {
 		return "CustomArrayList{" + 
@@ -67,13 +61,13 @@ public class CustomArrayList {
 //		list.add(25);
 //		System.out.println(list);
 		
-		CustomArrayList cusArr = new CustomArrayList();
-		cusArr.add(34);
-		cusArr.add(4);
-		cusArr.add(3);
+		CustomGenericArrList<Integer> cusArr = new CustomGenericArrList<>();
+		for(int i=0;i<14;i++) {
+			cusArr.add(2*i);
+		}
 		System.out.println(cusArr.toString());
 		
-		ArrayList<Integer> list2 = new ArrayList<>();
-		list2.add(1);
+//		ArrayList<Integer> list2 = new ArrayList<>();
+//		list2.add(1);
 	}
 }
